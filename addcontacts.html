@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>addScontact</title>
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="style.css" >
+<meta charset="UTF-8">
+</head>
+<body>
+    <br><br><br>
+    
+<h3>
+<p align="center">Contact form and contact list page</p>
+</h3>
+<div class="card col d-flex justify-content-center render_center3">
+    <div class="card-header" align="center">
+        <h2>Add Contact</h2>
+    </div>
+    <div class="card-body">
+<form name="contact_form" method="post" action="addcontact.php">
+    <label for="name">Name</label><br>
+    <input type="text" name="cName" id="cName"><br>
+    <label for="number">Phone Number</label><br>
+    <input type="number" name="cNum" id="cNum"><br>
+    <label for="email">Email</label><br>
+    <input type="text" name="cEmail" id="cEmail"><br><br>
+    <input type="submit" name="Submit" id="Submit" value="Submit" class="btn btn-primary">
+</form>
+</div>
+</div>
+<?php 
+$sqlQuery="SELECT * From `contact_data`";
+$result = mysqli_query($con,$sqlQuery);
+echo "<table border='1'>
+        <tr>
+        <th>Name</th>
+        <th>Ph No</th>
+        <th>Email</th>
+        </tr>";
+while($row1 = mysqli_fetch_array($result)){
+    echo "<tr>";
+    echo "<td>" .$row1['name']."</td>";
+    echo "<td>" .$row1['number']."</td>";
+    echo "<td>" .$row1['email']."</td>";
+    echo "</tr>";
+}
+echo "</table>";
+
+?>
+
+</body>
+</html>

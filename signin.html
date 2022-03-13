@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css" >
+</head>
+
+<body>
+    <main id="main-holder">
+        <div class="card col d-flex justify-content-center render_center">
+            <div class="card-header">
+                <h1>Sign in</h1>
+            </div>
+            <p class="card-text">Don't have an account?</p>
+            <a href="signup.html" class="btn btn-primary">SIGNUP</a>
+            
+            <label for="email">Email</label>
+            <form id="login-form" method="post" action="sigin.php" class="form-group">
+                <input type="text" name="username" id="username-field" placeholder="Username"><br>
+                <label for="password">password</label><br>
+                <input type="password" name="password" id="password-field" placeholder="Password"><br>
+                <a href="forgot.html">forgot your password?</a><br>
+                <input type="submit" value="Login" id="login-form-submit" class="btn btn-primary btn-large">
+            </form>
+        </div>
+    </main>
+</body>
+</html>

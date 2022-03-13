@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Signup</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css" >
+</head>
+
+<body>
+    <main id="main holder">
+        <div class="card col d-flex justify-content-center render_center2">
+        
+            <div class="card-header">
+            <h1>SIGNUP</h1>
+            </div>
+            
+            <p>Already have an account?</p>
+            <a href="signin.html" class="btn btn-primary">SignIn</a>            
+            
+            <form id="SignUp-form" method="post" action="signup.php" class="form-group"></form>
+            <label>Email</label>
+
+            <input type="text" name="sEmail" id="SEmail" placeholder="email">
+            <label>Password</label>
+            <input type="password" name="sPassword" id="sPassword" placeholder="type your password">
+            <label for="secret">Secret</label>
+            <input type="text" name="sSecret" id="sSecret" placeholder="secret input"><br>
+            <input type="submit" value="SignUp" class="btn btn-primary">
+        </form>
+        <p class="card-text">By clicking the "sign up" button,you are creating an account,and you agree to the terms of use.
+        </p>
+    </div>
+</main>
+</body>
+
+</html>
